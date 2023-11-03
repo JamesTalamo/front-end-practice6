@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+*,body{
+    margin:0;
+    padding:0;
+    font-family: 'League Spartan', sans-serif;
+    background-color: hsl(180, 52%, 96%);
+}
+
+.background-template{
+    width:100%;
+    height:100vh;
+    background-color: hsl(180, 52%, 96%);
+    position:relative;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.background-template-header-design{
+    width: 100%;
+    height:15%;
+    background-color: hsl(180, 29%, 50%);
+    position:absolute;
+    top:0%;
+    background-image: url(images/bg-header-desktop.svg);
+    background-position:center;
+}
+
+.navbar{
+    position:absolute;
+    top:10%;
+    width: 80%;
+    height: 10%;
+    background-color: hsl(180, 31%, 95%);
+    z-index: 1;
+    border-radius:10px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+}
+
+#btn{
+    position: absolute;
+    top:30%;
+    right:2%;
+    background-color: transparent;
+    width: 10%;
+    height: 40%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clear-button{
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    padding: 10% 10%;
+    color:hsl(180, 29%, 50%);
+    position:relative;
+    z-index: 1;
+
+}
+
+#clear-button::before{
+    content:'';
+    position:absolute;
+    top:70%;
+    left:0;
+    width: 100%;
+    height: 10%;
+    background-color: hsl(180, 29%, 50%);
+    z-index: -1;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 300ms;
+}
+
+#clear-button:hover::before{
+    transform: scale(1);
+}
+
+.content-area{
+    position:absolute;
+    left:3%;
+    width: 90%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:2rem;
+    background-color: transparent;
+}
+
+.small-boxes{
+    width: 10%;
+    height: 40%;
+    background-color: hsl(180, 14%, 88%);
+    position:relative;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.small-boxes-content-name{
+    background-color: transparent;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color:hsl(180, 29%, 50%);
+    font-size:100%;
+    position:relative;
+}
+
+.small-boxes-x{
+    
+    position:absolute;
+    top:0%;
+    right:0%;
+    background-color: hsl(180, 29%, 50%);
+    width: 30%;
+    height: 100%;
+    background-image: url(images/icon-remove.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:50%;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+    transition:300ms;
+}
+
+a:hover .small-boxes-x{
+    background-color: hsl(180, 14%, 20%);
+}
+
+ /* DOM added */
+.smallBoxesXAnchor:hover {
+    background-color: hsl(180, 14%, 20%);
+}
+
+
+
+.main-content-area{
+    position:absolute;
+    top:23%;
+    width: 80%;
+    height: 150%;
+    background-color: transparent;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.content-boxes{
+    position:relative;
+    border-radius: 10px;
+    background-color: hsl(180, 31%, 95%);
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    color:hsl(180, 29%, 50%);
+}
+
+.content-boxes::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: hsl(180, 29%, 50%);
+    width: 0.5%;
+    height: 100%;
+
+    transform: scaleY(0);
+    transform-origin: top;
+    transition:300ms;
+}
+
+.content-boxes:hover::before,
+.content-boxes:hover .need-work{
+    transform: scaleY(1);
+    color:hsl(180, 29%, 50%);
+}
+
+.content-box-photo-holder{
+    left:2%;
+    top:15%;
+    position:absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.content-box-photo-holder img{
+    width: 100%;
+    height: 100%;
+}
+
+.content-box-text-left{
+    position:absolute;
+    left:10%;
+    top:25%;
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.company-name{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.need-work{
+    color:black;
+    font-size: 30px;
+    font-weight: 700;
+    transition:300ms;
+}
+
+.more-info{
+    font-weight: 700;
+    color:hsl(180, 8%, 52%);
+}
+
+.content-box-right-button{
+    position:absolute;
+    right:5%;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:1rem;
+}
+
+.content-buttons{
+    position:relative;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    height: 30%;
+    font-weight: 700;
+    font-size:20px;
+    border-radius: 10px;
+    background-color: hsl(180, 14%, 88%);
+    color:hsl(180, 29%, 50%);
+    overflow: hidden;
+    z-index:1;
+    transition:300ms;
+}
+
+.content-buttons::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color:hsl(180, 29%, 50%) ;
+
+    transform: scaleY(0);
+    transform-origin: top;
+    transition:300ms;
+    z-index: -1;
+}
+
+.content-buttons:hover::before,
+.content-buttons:hover{
+    transform:scaleX(1);
+    color:white;
+}
